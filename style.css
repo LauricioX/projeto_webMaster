@@ -1,0 +1,525 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400&display=swap');
+
+:root{
+    --cor-principal:rgb(255, 255, 255);
+    --cor-aleatoria:rgb(4, 2, 114);
+    --cor-texto:rgb(0, 140, 255);
+    --cor-texto2:aliceblue;
+    --cor-reseva:#1771f5;
+}
+
+body{
+    font-family: 'Roboto Flex', sans-serif;
+    color: #1771f5;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+.home__container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cor-principal);
+}
+
+.header__container{
+    width: 100%;
+    height: 80px;
+    background-color: var(--cor-reseva);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   position: fixed;
+   z-index: 400;
+}
+
+.icon__toggle{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    z-index: 900;
+    right: 16px;
+    top: 24px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon__toggle img{
+    width: 40px;
+}
+
+.mobile__menu{
+    width: 0;
+    right: 0;
+    height: 100vh;
+    max-width: 300px;
+    background-color: var(--cor-reseva);
+    position:fixed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: .2s;
+}
+
+.show{
+    width: 100%;
+
+}
+
+.close{
+    display: none;
+}
+
+.toggle{
+
+}
+
+.mobile__menu a{
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+
+}
+
+
+
+.logo__container{
+    color: aliceblue;
+    font-size: 1.6rem;
+}
+
+.logo__container span{
+color: rgb(138, 198, 247);
+}
+
+
+.nav__container{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.4rem;
+    
+}
+.nav__container a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.nav__container a::before{
+    content: "";
+    position: absolute;
+    top: 60px;
+    width: 0px;
+    height: 1px;
+    transition: .5s;
+    border-radius: 30px;
+   
+    
+}
+
+.nav__container a:hover::before{
+   width:50px ;
+   background-color: rgb(255, 255, 255);
+   
+}
+
+
+.social__media__container{
+width: 13%;
+min-width: 200px;
+display: flex;
+gap: 10px;
+background-color:var(--cor-principal) ;
+height: 40px;
+align-items: center;
+justify-content: center;
+border-radius: 10px;
+
+}
+
+.social__media img{
+    width: 30px;
+    transition: .2s;
+}
+
+.social__media img:hover{
+    width: 34px;
+}
+
+
+.main__container{
+    padding: 0 30px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.473)), url(fotos/background/ft\ \(5\).jpg); */
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.content__hero{
+    width: 100%;
+    justify-self:flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.main__container h1{
+    text-align: left;
+    font-size: 4rem;
+    color: var(--cor-texto);
+
+}
+.main__container h1 span{
+    font-size: 2rem;
+    color: var(--cor-texto);
+
+}
+
+.btn{
+    width:200px ;
+    height: 50px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background-color: var(--cor-reseva);
+    color: var(--cor-principal);
+    border-radius: 10px;
+    transition: .2s;
+    border: none;
+
+}
+
+.btn:hover{
+    width:200px ;
+    height: 50px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    background-color: var(--cor-reseva);
+    color: var(--cor-texto2);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.185);
+}
+
+.img__container img{
+width: 100%;
+max-width: 800px;
+}
+
+
+
+
+
+
+
+/* sobre container  */
+
+.sobre__container{
+    display: flex;
+    height: 100vh;
+    padding: 120px 10px 0px 10px;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.pic__side__container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    max-width: 600px;
+    
+}
+.pic__side__container img{
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+    border:2px solid  #1771f5;
+
+}
+
+.title__container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+  max-height: 400px;
+
+}
+
+.title__container h1{
+font-size: 3rem;
+padding-bottom: 20px;
+}
+
+.title__container p {
+    font-size: 1.4rem;
+
+}
+
+.subtitle__container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.servicos__container{
+    padding: 60px 0;
+}
+
+.title__servicos{
+    text-align: center;
+    padding: 30px 0;
+}
+
+.title__servicos h1{
+    font-size: 3rem;
+}
+
+.container__card__sevicos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+ align-items: center;
+ justify-content: center;
+ gap: 20px;
+}
+
+.card__servicos{
+    margin-top: 40px;
+    width: 340px;
+    height: 314px;
+    background-color: #1771f5;
+    border-radius: 40px;
+    padding: 5px;
+    transition: .2s;
+}
+
+.card__servicos:hover{
+     position: relative;
+     bottom: 12px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.title__card__servicos{
+     color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 5px;
+}
+
+.text__card{
+    border-radius: 40px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.title__card__servicos img{
+    width: 80px;
+}
+
+
+.contato__container{
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+.title__contato{
+    text-align: center;
+    padding: 30px 0;
+    font-size: 2rem;
+}
+
+.icon__container{
+width: 100%;
+height: 500px;
+max-width: 500px;
+}
+
+
+.icon__container img{
+    width: 100%;
+}
+
+form{
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    background-color: #0649ad;
+    border-radius: 30px;
+    padding: 20px;
+    color: white;
+    box-shadow: 1px 1px 3px black;
+
+}
+
+input{
+    height: 34px;
+    padding-left: 10px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      border: 2px solid #1771f5;
+      transition: .2s;
+    }
+
+    input:focus{
+        border: none;
+        outline: 4px solid white;
+    }
+
+textarea{
+    border: 2px solid #1771f5;
+
+    font-family: inherit;
+        padding-left: 10px;
+        font-size: 1.2rem;
+       border-radius: 10px;
+   transition: .1s;
+}
+
+textarea:focus{
+    
+    border: none;
+    outline: 4px solid white;
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    background-color: #0649ad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+}
+
+@media screen and (max-width:499px) {
+  
+    .main__container h1{
+       font-size: 1.5rem;
+    }
+
+    .title__container h1{
+        font-size: 2rem;
+        
+    }
+
+}
+
+
+@media screen and (max-width:699px) {
+  
+    .main__container {
+        padding-top: 130px;
+        flex-direction: column;
+    }
+
+}
+
+
+@media screen and (max-width:799px) {
+    .nav__container{
+        display: none;
+    }
+    .main__container h1{
+        font-size: 3rem;
+    }
+
+    .social__media__container{
+        display: none;
+    }
+
+    .img__container img{
+        max-width: 300px;
+    }
+}
+
+
+
+@media screen and (max-width:999px) {
+   
+    .main__container h1{
+        font-size: 3rem;
+    }
+    .pic__side__container {
+        display: none;
+    }
+
+    .pic__side__container img {
+        display: none;
+    }
+
+    .title__container {
+        max-width: 700px;
+        padding: 0 10px;
+    }
+
+    .icon__container{
+        display: none;
+    }
+
+    .contato__container{
+        padding: 0 30px;
+    }
+
+   
+}
+
+
+
+@media screen and (max-width:1300px) {
+   
+    .pic__side__container img {
+        max-width: 400px;
+    }
+
+   
+}
+
+@media screen and (min-width:800px) {
+   .icon__toggle{
+       display: none;
+   }
+}
