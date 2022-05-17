@@ -238,7 +238,7 @@ max-width: 800px;
 .sobre__container{
     display: flex;
     height: 100vh;
-    padding: 120px 10px 0px 10px;
+    padding: 20px 10px 0px 10px;
     align-items: center;
     justify-content: center;
     
@@ -312,7 +312,7 @@ padding-bottom: 20px;
 .card__servicos{
     margin-top: 40px;
     width: 340px;
-    height: 314px;
+    height: 320px;
     background-color: #1771f5;
     border-radius: 40px;
     padding: 5px;
